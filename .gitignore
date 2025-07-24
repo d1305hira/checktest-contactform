@@ -1,0 +1,2 @@
+# MySQLコンテナが生成するデータを除外
+docker/mysql/data/
