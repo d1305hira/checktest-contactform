@@ -1,0 +1,88 @@
+/* 全体の背景とフォント */
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* コンテンツ領域のカード風レイアウト */
+.confirm__content {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 見出し */
+.confirm__heading h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* テーブル本体 */
+.confirm-table__inner {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 各行に下線と余白 */
+.confirm-table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+/* 項目名 */
+.confirm-table__header {
+    width: 30%;
+    background-color: #f0f2f5;
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    vertical-align: top;
+}
+
+/* 入力値表示欄 */
+.confirm-table__text {
+    width: 70%;
+    padding: 16px;
+    background-color: #ffffff;
+    color: #555;
+    vertical-align: top;
+}
+
+.confirm-table__text input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+/* ボタン */
+.form__button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form__button-submit {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form__button-submit:hover {
+    background-color: #45a049;
+}

@@ -14,6 +14,15 @@
 
     <main class="register-container">
         <h2>Register</h2>
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
         <form class=form action="/register" method="POST">
             @csrf
             <label for="name">お名前</label>
@@ -24,9 +33,14 @@
 
             <label for="password">パスワード</label>
             <input type="password" name="password" id="password" placeholder="例: coachtech106" required>
+            <p class="register-form__error-message">
+                @error('password')
+                {{ $message }}
+                @enderror
+            </p>
 
-            <button type="submit">登録</button>
-        </form>
+            <input class="register-form__btn btn" type="submit" value="登録">
+    </form>
     </main>
 </body>
 </html>

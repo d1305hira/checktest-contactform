@@ -77,9 +77,9 @@
         <div class="form__group-content">
             <div class="form__input--text">
                 <input type="tel" name="tel1" placeholder="090" value="{{ old('tel1') }}" />
-                <span class="hyphen">−</span>
+                <span class="hyphen">-</span>
                 <input type="tel" name="tel2" placeholder="1234" value="{{ old('tel2') }}" />
-                <span class="hyphen">−</span>
+                <span class="hyphen">-</span>
                 <input type="tel" name="tel3" placeholder="5678" value="{{ old('tel3') }}" />
             </div>
             <div class="form__error">
@@ -128,10 +128,16 @@
         </div>
         <div class="form__group-content">
             <div class="form__input--text">
-                <input type="text" name="content" placeholder="入力してください" value="{{ old('content') }}" />
+                <select name="category_id">
+                    <option value="" selected>選択してください</option>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->content }}
+                        </option>
+                    @endforeach
+                </select>
             </div>
             <div class="form__error">
-            @error('content')
+            @error('category_id')
             {{ $message }}
             @enderror
             </div>

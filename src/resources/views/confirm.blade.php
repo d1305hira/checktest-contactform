@@ -25,7 +25,7 @@
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">性別</th>
                 <td class="confirm-table__text">
-                    <input type="radio" name="gender" value="{{ $contact['gender'] }}">
+                    {{ $contact['gender'] == 1 ? '男性' : '女性' }}
                     <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
                 </td>
             </tr>
@@ -38,10 +38,7 @@
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">電話番号</th>
-                <td class="confirm-table__text">
-                    <input type="tel" name="tel" value="{{ $contact['tel'] }}" >
-                    <input type="hidden" name="tel" value="{{ $contact['tel'] }}">
-                </td>
+                <td class="confirm-table__text">{{ $contact['tel1'] }}{{ $contact['tel2'] }}{{ $contact['tel3'] }}</td>
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">住所</th>
@@ -60,8 +57,8 @@
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">お問い合わせの種類</th>
                 <td class="confirm-table__text">
-                    <input type="text" name="content" value="{{ $contact['content'] }}" >
-                    <input type="hidden" name="content" value="{{ $contact['content'] }}">
+                    <input type="text" name="category_id" value="{{ $contact['category_id'] }}" >
+                    <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}">
                 </td>
             </tr>
             <tr class="confirm-table__row">
